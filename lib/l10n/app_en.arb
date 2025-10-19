@@ -1,0 +1,14 @@
+{
+  "@@locale": "en",
+  "loginTitle": "Login",
+  "signupTitle": "Sign Up",
+  "laterTitle": "Later",
+  "homeTitle":"Home",
+  "profileTitle":"Profile",
+  "welcomeUser": "Welcome {userName}",
+  "welcomeUserDescription": "Welcome message with user name",
+  "emailLabel": "Email",
+  "emailHint": "Enter your email",
+  "passwordLabel": "Password",
+  "passwordHint": "Enter your password"
+}
