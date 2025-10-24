@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:token_manage_apk/core/utils/dynamic_cookie_manager.dart';
 import 'api_endpoints.dart';
@@ -6,9 +8,7 @@ enum SplitKey { GET, POST, PUT, DELETE }
 
 class ApiController {
   final ApiClient client;
-
   ApiController({required this.client});
-
   Future<http.Response> manageApiRequest(
     dynamic body,
     String endpoint,
@@ -17,6 +17,7 @@ class ApiController {
     TokenKey tokenType = TokenKey.accessToken,
   }) async {
     String? token;
+    http.Response response;
 
     if (isTokenRequired) {
       token = await DynamicCookieManager.get(tokenType);
@@ -26,15 +27,49 @@ class ApiController {
       }
     }
 
-    http.Response response = await apiRequest(
+    response = await apiRequest(
       body: body,
       splitKey: method,
       endpoint: endpoint,
       token: token,
     );
-    if (response.statusCode != 401 || tokenType == TokenKey.tempToken) {
+    if (response.statusCode != 401 ||
+        tokenType == TokenKey.tempToken ||
+        !isTokenRequired) {
       return response;
     }
+    token = await DynamicCookieManager.get(TokenKey.refreshToken);
+
+    if (token == null) {
+      throw Exception("Token missing. Redirected to login.");
+    }
+    response = await apiRequest(
+      splitKey: method,
+      endpoint: "get-new-access-token",
+      token: token,
+    );
+    if (response.statusCode == 401) {
+      DynamicCookieManager.delete(TokenKey.accessToken);
+      DynamicCookieManager.delete(TokenKey.refreshToken);
+      throw Exception("Token missing. Redirected to login.");
+    }
+    if (response.statusCode != 200) {
+      return response;
+    }
+
+    final data = jsonDecode(response.body);
+    final newAccessToken = data['access_token'];
+    final newRefreshToken = data['refresh_token'];
+
+    DynamicCookieManager.set(TokenKey.accessToken, newAccessToken);
+    DynamicCookieManager.set(TokenKey.refreshToken, newRefreshToken);
+
+    response = await apiRequest(
+      body: body,
+      splitKey: method,
+      endpoint: endpoint,
+      token: newAccessToken,
+    );
     return response;
   }
 
