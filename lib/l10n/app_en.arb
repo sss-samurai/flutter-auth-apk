@@ -10,5 +10,7 @@
   "emailLabel": "Email",
   "emailHint": "Enter your email",
   "passwordLabel": "Password",
-  "passwordHint": "Enter your password"
+  "passwordHint": "Enter your password",
+  "settingsTitle":"Settings",
+  "skipTitle":"Skip"
 }

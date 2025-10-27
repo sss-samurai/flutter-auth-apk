@@ -1,0 +1,16 @@
+{
+  "@@locale": "ta",
+  "loginTitle": "உள்நுழை",
+  "signupTitle": "பதிவு செய்",
+  "laterTitle": "பிறகு",
+  "homeTitle": "முகப்பு",
+  "profileTitle": "சுயவிவரம்",
+  "welcomeUser": "வரவேற்கிறோம் {userName}",
+  "welcomeUserDescription": "பயனர் பெயருடன் வரவேற்பு செய்தி",
+  "emailLabel": "மின்னஞ்சல்",
+  "emailHint": "உங்கள் மின்னஞ்சலை உள்ளிடவும்",
+  "passwordLabel": "கடவுச்சொல்",
+  "passwordHint": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
+  "settingsTitle": "அமைப்புகள்",
+  "skipTitle": "தவிர்க்கவும்"
+}

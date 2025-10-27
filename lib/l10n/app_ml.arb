@@ -1,0 +1,16 @@
+{
+  "@@locale": "ml",
+  "loginTitle": "ലോഗിൻ",
+  "signupTitle": "സൈൻ അപ്പ്",
+  "laterTitle": "പിന്നീട്",
+  "homeTitle": "ഹോം",
+  "profileTitle": "പ്രൊഫൈൽ",
+  "welcomeUser": "സ്വാഗതം {userName}",
+  "welcomeUserDescription": "ഉപയോക്താവിന്റെ പേരോടുകൂടിയ സ്വാഗത സന്ദേശം",
+  "emailLabel": "ഇമെയിൽ",
+  "emailHint": "നിങ്ങളുടെ ഇമെയിൽ നൽകുക",
+  "passwordLabel": "പാസ്‌വേഡ്",
+  "passwordHint": "നിങ്ങളുടെ പാസ്‌വേഡ് നൽകുക",
+  "settingsTitle": "സെറ്റിംഗ്സ്",
+  "skipTitle": "സ്കിപ്പ് ചെയ്യുക"
+}

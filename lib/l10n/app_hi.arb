@@ -1,0 +1,16 @@
+{
+  "@@locale": "hi",
+  "loginTitle": "लॉगिन",
+  "signupTitle": "साइन अप",
+  "laterTitle": "बाद में",
+  "homeTitle": "होम",
+  "profileTitle": "प्रोफ़ाइल",
+  "welcomeUser": "स्वागत है {userName}",
+  "welcomeUserDescription": "उपयोगकर्ता के नाम के साथ स्वागत संदेश",
+  "emailLabel": "ईमेल",
+  "emailHint": "अपना ईमेल दर्ज करें",
+  "passwordLabel": "पासवर्ड",
+  "passwordHint": "अपना पासवर्ड दर्ज करें",
+  "settingsTitle": "सेटिंग्स",
+  "skipTitle": "स्किप करें"
+}

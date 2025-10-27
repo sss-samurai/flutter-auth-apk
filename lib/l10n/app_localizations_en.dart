@@ -42,4 +42,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get passwordHint => 'Enter your password';
+
+  @override
+  String get settingsTitle => 'Settings';
+
+  @override
+  String get skipTitle => 'Skip';
 }

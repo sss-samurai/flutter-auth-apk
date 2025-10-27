@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:token_manage_apk/features/login/login_provider.dart';
 import 'package:token_manage_apk/l10n/app_localizations.dart';
 import 'package:token_manage_apk/shared/ui/textField/app_text_field.dart';
 
+import '../../../core/router/app_routes.dart';
 import '../../../shared/ui/button/app_button.dart';
 
 class Login extends ConsumerWidget {
@@ -47,8 +49,14 @@ class Login extends ConsumerWidget {
                 const SizedBox(height: 16),
                 AppButton(
                   minWidth: formWidth,
-                  label: AppLocalizations.of(context)!.laterTitle,
+                  label: AppLocalizations.of(context)!.loginTitle,
                   onPressed: () => print(formWidth),
+                ),
+                const SizedBox(height: 16),
+                AppButton(
+                  minWidth: formWidth,
+                  label: AppLocalizations.of(context)!.skipTitle,
+                  onPressed: () => context.goNamed(AppRoutes.home),
                 ),
               ],
             ),

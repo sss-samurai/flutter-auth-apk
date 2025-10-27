@@ -5,7 +5,7 @@ import 'package:token_manage_apk/core/constants/app_icons.dart';
 import 'package:token_manage_apk/l10n/app_localizations.dart';
 import '../../../core/app/app_env.dart';
 import '../../personalMainScreen/presentation/personal_main_screen.dart';
-import '../../homeScreen/presentation/home_main_screen.dart'; // ✅ import HomeMainScreen
+import '../../homeScreen/presentation/home_main_screen.dart';
 import '../main_bottom_nav_provider.dart';
 
 class MainBottomNavScreen extends ConsumerWidget {
@@ -35,6 +35,10 @@ class MainBottomNavScreen extends ConsumerWidget {
           BottomNavigationBarItem(
             icon: Icon(AppIcons.profile),
             label: AppLocalizations.of(context)!.profileTitle,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(AppIcons.settings),
+            label: AppLocalizations.of(context)!.settingsTitle,
           ),
         ],
       ),
