@@ -18,7 +18,6 @@ class Login extends ConsumerWidget {
 
     final screenWidth = MediaQuery.of(context).size.width;
 
-    // Dynamically calculate max width
     final formWidth = screenWidth > 600 ? 400.0 : screenWidth * 0.9;
 
     return Scaffold(

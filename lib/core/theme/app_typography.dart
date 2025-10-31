@@ -154,4 +154,11 @@ class AppTypography {
     height: 1.4,
     letterSpacing: 0,
   );
+  static const notificationCount = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+    height: 1.4,
+    letterSpacing: 0,
+  );
 }

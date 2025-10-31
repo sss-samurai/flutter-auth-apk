@@ -22,6 +22,7 @@ enum TextType {
   cartText,
   priceSale,
   creditCardText,
+  notificationCount,
 }
 
 extension TextTypeExtension on TextType {
@@ -65,6 +66,8 @@ extension TextTypeExtension on TextType {
         return AppTypography.priceSale;
       case TextType.creditCardText:
         return AppTypography.creditCardText;
+      case TextType.notificationCount:
+        return AppTypography.notificationCount;
     }
   }
 }
