@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:token_manage_apk/l10n/app_localizations.dart';
 import 'package:token_manage_apk/shared/ui/button/app_button.dart';
 import 'package:token_manage_apk/shared/ui/button/app_text_button.dart';
-import '../text/app_text.dart';
-import '../text/text_type.dart';
 
 class BubbleHeader extends StatelessWidget {
   final VoidCallback onLogin;

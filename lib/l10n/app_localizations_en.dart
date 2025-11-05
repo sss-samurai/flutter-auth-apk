@@ -48,4 +48,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get skipTitle => 'Skip';
+
+  @override
+  String get searchLabel => 'Search';
 }

@@ -48,4 +48,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get skipTitle => 'സ്കിപ്പ് ചെയ്യുക';
+
+  @override
+  String get searchLabel => 'Search';
 }

@@ -33,7 +33,6 @@ class Login extends ConsumerWidget {
                 AppTextField(
                   label: AppLocalizations.of(context)!.emailLabel,
                   controller: loginForm.emailController,
-                  hintText: AppLocalizations.of(context)!.emailHint,
                   keyboardType: TextInputType.emailAddress,
                   suffixIcon: const Icon(Icons.email),
                 ),
@@ -41,7 +40,6 @@ class Login extends ConsumerWidget {
                 AppTextField(
                   label: AppLocalizations.of(context)!.passwordLabel,
                   controller: loginForm.passwordController,
-                  hintText: AppLocalizations.of(context)!.passwordHint,
                   obscureText: true,
                   suffixIcon: const Icon(Icons.lock),
                 ),

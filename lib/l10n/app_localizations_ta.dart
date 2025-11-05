@@ -48,4 +48,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get skipTitle => 'தவிர்க்கவும்';
+
+  @override
+  String get searchLabel => 'Search';
 }

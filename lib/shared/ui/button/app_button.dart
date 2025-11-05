@@ -26,7 +26,7 @@ class AppButton extends StatelessWidget {
 
     final backgroundColor = isPrimary
         ? theme.colorScheme.primary
-        : theme.colorScheme.surfaceVariant;
+        : theme.colorScheme.surfaceContainerHighest;
 
     final foregroundColor = isPrimary
         ? theme.colorScheme.onPrimary

@@ -19,4 +19,6 @@ class AppIcons {
   // Misc
   static const search = Icons.search;
   static const notification = Icons.notifications;
+  static const filter = Icons.filter_list;
+  static const star = Icons.star;
 }

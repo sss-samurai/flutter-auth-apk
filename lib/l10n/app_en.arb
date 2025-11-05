@@ -12,5 +12,6 @@
   "passwordLabel": "Password",
   "passwordHint": "Enter your password",
   "settingsTitle":"Settings",
-  "skipTitle":"Skip"
+  "skipTitle":"Skip",
+  "searchLabel": "Search"
 }

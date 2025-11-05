@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
 
 class AppImage extends StatelessWidget {
   final String? url;
@@ -8,6 +7,7 @@ class AppImage extends StatelessWidget {
   final BoxFit fit;
   final BorderRadiusGeometry? borderRadius;
   final bool isAsset; // NEW FLAG
+  final VoidCallback? onTap; // NEW OPTIONAL CALLBACK
 
   const AppImage({
     super.key,
@@ -17,6 +17,7 @@ class AppImage extends StatelessWidget {
     this.fit = BoxFit.cover,
     this.borderRadius,
     this.isAsset = false,
+    this.onTap,
   });
 
   @override
@@ -48,6 +49,11 @@ class AppImage extends StatelessWidget {
                 );
               },
             );
+    }
+
+    // Wrap with GestureDetector if onTap is provided
+    if (onTap != null) {
+      imageWidget = GestureDetector(onTap: onTap, child: imageWidget);
     }
 
     if (borderRadius != null) {

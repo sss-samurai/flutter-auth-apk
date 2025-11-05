@@ -8,6 +8,7 @@ class IconHolder extends StatelessWidget {
   final int notificationCount;
   final VoidCallback? onTap;
   final double size;
+  final Color? color;
 
   const IconHolder({
     super.key,
@@ -15,6 +16,7 @@ class IconHolder extends StatelessWidget {
     this.notificationCount = 0,
     this.onTap,
     this.size = 28,
+    this.color,
   });
 
   @override
@@ -24,7 +26,11 @@ class IconHolder extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          Icon(icon, size: size, color: Theme.of(context).iconTheme.color),
+          Icon(
+            icon,
+            size: size,
+            color: color ?? Theme.of(context).iconTheme.color,
+          ),
           if (notificationCount > 0)
             Positioned(
               right: -6,

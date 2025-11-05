@@ -18,7 +18,7 @@ class MyApp extends ConsumerWidget {
     return MaterialApp.router(
       title: 'Auth Flutter App',
       theme: AppTheme.light,
-      // darkTheme: AppTheme.dark,
+      darkTheme: AppTheme.dark,
       locale: appState.locale,
       supportedLocales: AppLocales.supported,
       localizationsDelegates: AppLocalizations.localizationsDelegates,

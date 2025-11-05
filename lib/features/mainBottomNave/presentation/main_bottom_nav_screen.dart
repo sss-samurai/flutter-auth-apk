@@ -36,10 +36,6 @@ class MainBottomNavScreen extends ConsumerWidget {
             icon: Icon(AppIcons.profile),
             label: AppLocalizations.of(context)!.profileTitle,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(AppIcons.settings),
-            label: AppLocalizations.of(context)!.settingsTitle,
-          ),
         ],
       ),
     );

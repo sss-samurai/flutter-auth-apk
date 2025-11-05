@@ -48,4 +48,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get skipTitle => 'स्किप करें';
+
+  @override
+  String get searchLabel => 'Search';
 }
