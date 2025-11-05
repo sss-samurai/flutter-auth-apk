@@ -22,7 +22,7 @@ class MainBottomNavScreen extends ConsumerWidget {
     ];
 
     return Scaffold(
-      body: pages[currentIndex],
+      body: SafeArea(child: pages[currentIndex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) =>

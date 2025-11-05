@@ -1,85 +1,82 @@
-final List<String> carouselImageUrls = [
-  'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-craig-122861-376464.jpg&fm=jpg',
-  'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528',
-  'https://blog.swiggy.com/wp-content/uploads/2024/02/Masala-Dosa-1024x538.jpg',
-  "https://eduauraapublic.s3.ap-south-1.amazonaws.com/webassets/images/blogs/indian-food-nutrition.jpg",
-];
+import 'dart:math';
 
+const List<String> carouselImageUrls = [
+  'https://graphicsfamily.com/wp-content/uploads/edd/2021/07/Food-Offer-Banner-Design-Template.jpg',
+  'https://img.pikbest.com/templates/20240602/food-burger-restaurant-offer-web-banner-design_10587345.jpg!bw700',
+  'https://img.pikbest.com/templates/20240602/food-burger-restaurant-special-offer-web-banner_10587321.jpg!w700wp',
+  "https://marketplace.canva.com/EAGbO2DbysY/1/0/1600w/canva-yellow-and-red-modern-promotion-burger-banner-oPBs35K2Bi0.jpg",
+];
+const String profile_dummy =
+    "https://www.catholicsingles.com/wp-content/uploads/2020/06/blog-header-3.png";
 final List<Map<String, dynamic>> dummyProducts = [
   {
     "title": "Classic Dosa",
     "subtitle": "Crispy and golden",
     "price": 458.5,
     "rating": 3.4,
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfpN7O92ChxjBE1hWY0ZnxOjUVBen1PVKGag&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Isolated-Pic.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Pasta Delight",
     "subtitle": "Italian creamy goodness",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ-SUjbf93jI1s7rxRTTKPj4BM6NI_9UEcTQ&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Transparent.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Paneer Tikka",
     "subtitle": "Smoky and spicy",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRHSJsSNNR01L6U3zVfWti3OTYTT2bjs2bhQ&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Isolated-File.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Fruit Bowl",
     "subtitle": "Fresh seasonal fruits",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8MNMuTBtGZcalDZ0v4POEDVwR-jaYW13Svw&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-Transparent-PNG.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Veg Burger",
     "subtitle": "Loaded and juicy",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLEbEghv3LFDTP1vzVvQSEUFbPbrWpVVHTtQ&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-HD.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Butter Chicken",
     "subtitle": "Rich creamy curry",
     "rating": 3.4,
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEs8RQMs3KmRu64bwJdhTWqua_RF4tjLsNeA&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Clipart.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Momos",
-    "rating": 3.4,
     "subtitle": "Steamed and spicy",
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrSodh2_bz3T_LLA16yP9WdpyAoAUkC5-TdA&s",
+    "rating": 3.4,
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Isolated-Image.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Sushi Platter",
     "subtitle": "Japanese classic rolls",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://cdn.mygingergarlickitchen.com/images/675px/675px-bhelpuri-recipe-my-ginger-garlic-kitchen-6.jpg",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-File.png",
+    "favorite": Random().nextBool(),
   },
   {
     "title": "Sushi Platter",
     "subtitle": "Japanese classic rolls",
     "price": 458.5,
     "rating": 3.4,
-
-    "imageUrl":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBREg-irJG9KqAQijvEtwChQCtlU8wTjMcmg&s",
+    "imageUrl": "https://www.pngmart.com/files/23/Food-PNG-Free-Download.png",
+    "favorite": Random().nextBool(),
   },
 ];

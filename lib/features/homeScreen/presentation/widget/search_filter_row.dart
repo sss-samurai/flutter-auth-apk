@@ -25,7 +25,7 @@ class SearchFilterRow extends StatelessWidget {
             label: AppLocalizations.of(context)!.searchLabel,
             controller: searchController,
             suffixIcon: const Icon(AppIcons.search),
-            onSuffixTap: onSearchPressed, // ✅ handle search tap
+            onSuffixTap: onSearchPressed,
           ),
         ),
         const SizedBox(width: 12),

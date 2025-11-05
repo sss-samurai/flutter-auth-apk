@@ -51,7 +51,6 @@ class AppImage extends StatelessWidget {
             );
     }
 
-    // Wrap with GestureDetector if onTap is provided
     if (onTap != null) {
       imageWidget = GestureDetector(onTap: onTap, child: imageWidget);
     }

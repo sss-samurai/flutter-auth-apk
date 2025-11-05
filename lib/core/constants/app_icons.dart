@@ -21,4 +21,5 @@ class AppIcons {
   static const notification = Icons.notifications;
   static const filter = Icons.filter_list;
   static const star = Icons.star;
+  static const favorite = Icons.favorite;
 }

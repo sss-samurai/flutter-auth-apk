@@ -4,12 +4,14 @@ import 'package:token_manage_apk/core/app/app_env.dart';
 import 'package:token_manage_apk/features/homeScreen/home_screen_provider.dart';
 import 'package:token_manage_apk/features/homeScreen/presentation/widget/home_carousel.dart';
 import 'package:token_manage_apk/features/homeScreen/presentation/widget/search_filter_row.dart';
+import 'package:token_manage_apk/shared/ui/text/app_text.dart';
 
 import '../../../core/constants/app_icons.dart';
 import '../../../core/data/dummy_data.dart';
 import '../../../core/utils/responsive/responsive_utils.dart';
 import '../../../shared/ui/header/profile_header.dart';
 import '../../../shared/ui/icon/app_icon.dart';
+import '../../../shared/ui/text/text_type.dart';
 import '../../../shared/widgets/product/product_list.dart';
 
 class HomeMainScreen extends ConsumerWidget {
@@ -30,7 +32,7 @@ class HomeMainScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ProfileHeader(
-                imageUrl: carouselImageUrls[0],
+                imageUrl: profile_dummy,
                 name: 'John Doe',
                 endIcon: IconHolder(
                   icon: AppIcons.notification,
@@ -54,8 +56,8 @@ class HomeMainScreen extends ConsumerWidget {
 
               HomeCarousel(imageUrls: carouselImageUrls),
               const SizedBox(height: 16),
-
-              const SizedBox(height: 16),
+              AppText(text: "Featured Products", type: TextType.bodyTextBold),
+              const SizedBox(height: 10),
               ProductList(products: dummyProducts),
             ],
           ),
