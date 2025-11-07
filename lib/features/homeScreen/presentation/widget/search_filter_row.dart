@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_icons.dart';
 import '../../../../l10n/app_localizations.dart';
+import '../../../../shared/ui/icon/app_icon.dart';
 import '../../../../shared/ui/textField/search_app_text_field.dart';
 
 class SearchFilterRow extends StatelessWidget {
@@ -24,15 +25,13 @@ class SearchFilterRow extends StatelessWidget {
           child: SearchAppTextField(
             label: AppLocalizations.of(context)!.searchLabel,
             controller: searchController,
-            suffixIcon: const Icon(AppIcons.search),
+            suffixIcon: IconHolder(icon: AppIcons.search),
             onSuffixTap: onSearchPressed,
           ),
         ),
         const SizedBox(width: 12),
-        IconButton(
-          icon: const Icon(AppIcons.filter),
-          onPressed: onFilterPressed,
-        ),
+
+        IconHolder(icon: AppIcons.filter, onTap: onFilterPressed),
       ],
     );
   }

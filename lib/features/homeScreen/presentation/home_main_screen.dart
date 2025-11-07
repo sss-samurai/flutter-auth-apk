@@ -8,6 +8,7 @@ import 'package:token_manage_apk/shared/ui/text/app_text.dart';
 
 import '../../../core/constants/app_icons.dart';
 import '../../../core/data/dummy_data.dart';
+import '../../../core/utils/logger.dart';
 import '../../../core/utils/responsive/responsive_utils.dart';
 import '../../../shared/ui/header/profile_header.dart';
 import '../../../shared/ui/icon/app_icon.dart';
@@ -44,16 +45,15 @@ class HomeMainScreen extends ConsumerWidget {
               SearchFilterRow(
                 searchController: homeController.searchValue,
                 onSearchPressed: () {
-                  print(
+                  Logger.log(
                     'Search icon pressed: ${homeController.searchValue.text}',
                   );
                 },
                 onFilterPressed: () {
-                  print('Filter icon pressed');
+                  Logger.log('Filter icon pressed');
                 },
               ),
               const SizedBox(height: 16),
-
               HomeCarousel(imageUrls: carouselImageUrls),
               const SizedBox(height: 16),
               AppText(text: "Featured Products", type: TextType.bodyTextBold),

@@ -27,20 +27,25 @@ class SearchAppTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: label,
         suffixIcon: suffixIcon != null
-            ? InkWell(onTap: onSuffixTap, child: suffixIcon)
+            ? IconButton(
+                onPressed: onSuffixTap,
+                icon: suffixIcon!,
+                splashRadius: 20,
+              )
             : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none, // No border
+          borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none, // No border
+          borderSide: BorderSide.none,
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none, // No border when focused
+          borderSide: BorderSide.none,
         ),
+        // Padding and background
         contentPadding: const EdgeInsets.symmetric(
           vertical: 16,
           horizontal: 12,

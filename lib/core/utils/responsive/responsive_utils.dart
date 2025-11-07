@@ -94,4 +94,17 @@ class ResponsiveUtils {
         return 8;
     }
   }
+
+  static double getImageSizeInDetailesView(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenType = getScreenType(screenWidth);
+    switch (screenType) {
+      case ScreenType.mobile:
+        return 250;
+      case ScreenType.tablet:
+        return 350;
+      case ScreenType.desktop:
+        return 500;
+    }
+  }
 }

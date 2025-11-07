@@ -9,22 +9,28 @@ import '../router/app_router.dart'; // your GoRouter setup
 
 class MyApp extends ConsumerWidget {
   final Environment environment;
+
   const MyApp({super.key, required this.environment});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = setupRouter(environment);
     final appState = ref.watch(appStateProvider);
+
     return MaterialApp.router(
       title: 'Auth Flutter App',
+
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
+
       locale: appState.locale,
       supportedLocales: AppLocales.supported,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
+
       routerConfig: router,
+
+      debugShowCheckedModeBanner: false,
     );
   }
 }

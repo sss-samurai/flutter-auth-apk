@@ -29,4 +29,17 @@ class ResponsiveHeader {
         return 70;
     }
   }
+
+  static double getImageAspectRatio(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenType = getScreenType(screenWidth);
+    switch (screenType) {
+      case ScreenType.mobile:
+        return 1 / 1;
+      case ScreenType.tablet:
+        return 4 / 4;
+      case ScreenType.desktop:
+        return 16 / 16;
+    }
+  }
 }

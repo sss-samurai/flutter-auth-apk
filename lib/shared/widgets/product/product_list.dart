@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:token_manage_apk/shared/widgets/product/product_card_details.dart';
 import 'package:token_manage_apk/shared/widgets/product/product_card_image.dart';
 import '../../../../shared/ui/card/app_card.dart';
 import '../../../core/constants/app_icons.dart';
+import '../../../core/router/app_routes.dart';
 import '../../../core/utils/responsive/responsive_utils.dart';
 import '../../ui/icon/app_icon.dart';
 
@@ -30,7 +32,9 @@ class ProductList extends StatelessWidget {
       itemBuilder: (context, index) {
         final product = products[index];
         return AppCard(
-          onTap: () => print("Tapped ${product['title']}"),
+          onTap: () {
+            context.push(AppRoutes.productDetailsPath, extra: product['id']);
+          },
           child: Stack(
             children: [
               /// Main content of the card
