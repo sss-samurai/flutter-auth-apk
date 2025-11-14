@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../text/app_text.dart';
 import '../text/text_type.dart';
+import 'package:flutter/services.dart'; // <-- Needed for input formatters
 
 class AppTextField extends StatelessWidget {
   final String label;
@@ -10,6 +11,7 @@ class AppTextField extends StatelessWidget {
   final bool obscureText;
   final TextInputType keyboardType;
   final VoidCallback? onSuffixTap;
+  final bool onlyNumbers; // <-- New flag
 
   const AppTextField({
     super.key,
@@ -20,6 +22,7 @@ class AppTextField extends StatelessWidget {
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
     this.onSuffixTap,
+    this.onlyNumbers = false, // default false
   });
 
   @override
@@ -38,7 +41,10 @@ class AppTextField extends StatelessWidget {
         TextField(
           controller: controller,
           obscureText: obscureText,
-          keyboardType: keyboardType,
+          keyboardType: onlyNumbers ? TextInputType.number : keyboardType,
+          inputFormatters: onlyNumbers
+              ? [FilteringTextInputFormatter.digitsOnly]
+              : null,
           decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: suffixIcon != null
@@ -47,7 +53,7 @@ class AppTextField extends StatelessWidget {
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide(
-                color: colorScheme.onSurface.withOpacity(0.2), // dynamic color
+                color: colorScheme.onSurface.withOpacity(0.2),
                 width: 1.5,
               ),
             ),

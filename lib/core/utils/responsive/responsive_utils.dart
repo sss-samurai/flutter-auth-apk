@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:token_manage_apk/core/utils/responsive/responsive_breakpoints.dart';
 
 class ResponsiveUtils {
-  static EdgeInsets screenPadding(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
+  static ScreenType _screenType(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    return getScreenType(width);
+  }
 
-    switch (screenType) {
+  static EdgeInsets screenPadding(BuildContext context) {
+    switch (_screenType(context)) {
       case ScreenType.mobile:
         return const EdgeInsets.all(10);
       case ScreenType.tablet:
@@ -17,10 +19,7 @@ class ResponsiveUtils {
   }
 
   static double textFieldMaxWidth(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.mobile:
         return double.infinity;
       case ScreenType.tablet:
@@ -31,10 +30,7 @@ class ResponsiveUtils {
   }
 
   static EdgeInsets textFieldPadding(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.mobile:
         return const EdgeInsets.symmetric(vertical: 6, horizontal: 8);
       case ScreenType.tablet:
@@ -45,10 +41,7 @@ class ResponsiveUtils {
   }
 
   static double getCarouselHeight(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.mobile:
         return 180;
       case ScreenType.tablet:
@@ -58,21 +51,21 @@ class ResponsiveUtils {
     }
   }
 
-  static double getMaxWidth(ScreenType type, double screenWidth) {
-    switch (type) {
+  static double getMaxWidth(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    switch (_screenType(context)) {
       case ScreenType.mobile:
-        return screenWidth; // full width
+        return screenWidth;
       case ScreenType.tablet:
-        return screenWidth * 0.8; // capped width
+        return screenWidth * 0.8;
       case ScreenType.desktop:
         return 800; // max width cap
     }
   }
 
   static int getCrossAxisCount(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.desktop:
         return 4;
       case ScreenType.tablet:
@@ -83,9 +76,7 @@ class ResponsiveUtils {
   }
 
   static double getSpacing(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.desktop:
         return 24;
       case ScreenType.tablet:
@@ -96,15 +87,25 @@ class ResponsiveUtils {
   }
 
   static double getImageSizeInDetailesView(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-    switch (screenType) {
+    switch (_screenType(context)) {
       case ScreenType.mobile:
         return 250;
       case ScreenType.tablet:
         return 350;
       case ScreenType.desktop:
         return 500;
+    }
+  }
+
+  static double loginContainerWidth(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    switch (_screenType(context)) {
+      case ScreenType.mobile:
+        return screenWidth * 0.9;
+      case ScreenType.tablet:
+        return 400.0;
+      case ScreenType.desktop:
+        return 420.0;
     }
   }
 }

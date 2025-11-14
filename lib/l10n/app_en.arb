@@ -1,17 +1,49 @@
 {
   "@@locale": "en",
+
+  "homeTitle": "Home",
+  "profileTitle": "Profile",
+  "settingsTitle": "Settings",
+
   "loginTitle": "Login",
   "signupTitle": "Sign Up",
   "laterTitle": "Later",
-  "homeTitle":"Home",
-  "profileTitle":"Profile",
+  "skipTitle": "Skip",
+
   "welcomeUser": "Welcome {userName}",
-  "welcomeUserDescription": "Welcome message with user name",
+  "@welcomeUser": {
+    "description": "Welcome message displayed with the user's name",
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "John"
+      }
+    }
+  },
+
   "emailLabel": "Email",
   "emailHint": "Enter your email",
   "passwordLabel": "Password",
   "passwordHint": "Enter your password",
-  "settingsTitle":"Settings",
-  "skipTitle":"Skip",
-  "searchLabel": "Search"
+
+  "searchLabel": "Search",
+
+  "loginHeader": "Login",
+  "loginSubtitle": "Enter your credentials to continue",
+
+  "signupHeading": "Sign Up",
+  "signupSubtitle": "Create a new account",
+  "signupButton":"Sign Up",
+
+  "createAccountTitle": "Create a New Account",
+  "createAccountButton": "Create Account",
+  
+  "alreadyHaveAccount": "Already have an account?",
+  "loginButton": "Login",
+
+  "otpHeader": "OTP",
+  "otpSubtitle": "Enter your OTP",
+  "verify": "Verify",
+  "otpFieldLabel": "OTP"
+
 }

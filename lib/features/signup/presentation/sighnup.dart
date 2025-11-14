@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:token_manage_apk/core/utils/logger.dart';
 import 'package:token_manage_apk/features/login/login_provider.dart';
 import 'package:token_manage_apk/l10n/app_localizations.dart';
-import 'package:token_manage_apk/shared/ui/button/app_text_button.dart';
 import 'package:token_manage_apk/shared/ui/text/app_text.dart';
 import 'package:token_manage_apk/shared/ui/textField/app_text_field.dart';
 import '../../../core/router/app_routes.dart';
 import '../../../core/utils/responsive/responsive_utils.dart';
 import '../../../shared/ui/animations/curvy_wave_animation.dart';
 import '../../../shared/ui/button/app_button.dart';
+import '../../../shared/ui/button/app_text_button.dart';
 import '../../../shared/ui/card/glass_container.dart';
 import '../../../shared/ui/text/text_type.dart';
 
-class Login extends ConsumerWidget {
-  const Login({super.key});
+class Sighnup extends ConsumerWidget {
+  const Sighnup({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loginForm = ref.watch(loginProvider);
     final formWidth = ResponsiveUtils.loginContainerWidth(context);
-
     return Scaffold(
       body: Stack(
         children: [
@@ -37,12 +35,12 @@ class Login extends ConsumerWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       AppText(
-                        text: AppLocalizations.of(context)!.loginHeader,
+                        text: AppLocalizations.of(context)!.signupTitle,
                         type: TextType.subHeader,
                       ),
                       const SizedBox(height: 8),
                       AppText(
-                        text: AppLocalizations.of(context)!.loginSubtitle,
+                        text: AppLocalizations.of(context)!.signupSubtitle,
                         type: TextType.bodyText,
                       ),
                       const SizedBox(height: 24),
@@ -68,25 +66,23 @@ class Login extends ConsumerWidget {
                             child: AppText(
                               text: AppLocalizations.of(
                                 context,
-                              )!.createAccountTitle,
+                              )!.alreadyHaveAccount,
                               type: TextType.bodyText,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
                           AppTextButton(
-                            label: AppLocalizations.of(
-                              context,
-                            )!.createAccountButton,
+                            label: AppLocalizations.of(context)!.loginButton,
                             onPressed: () =>
-                                context.pushReplacementNamed(AppRoutes.signup),
+                                context.pushReplacementNamed(AppRoutes.login),
                           ),
                         ],
                       ),
                       const SizedBox(height: 24),
                       AppButton(
                         minWidth: formWidth,
-                        label: AppLocalizations.of(context)!.loginTitle,
-                        onPressed: () => print(formWidth),
+                        label: AppLocalizations.of(context)!.signupButton,
+                        onPressed: () => context.pushNamed(AppRoutes.otp),
                       ),
                     ],
                   ),

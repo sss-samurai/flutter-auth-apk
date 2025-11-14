@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:token_manage_apk/core/app/app_env.dart';
 import 'package:token_manage_apk/features/homeScreen/home_screen_provider.dart';
 import 'package:token_manage_apk/features/homeScreen/presentation/widget/home_carousel.dart';
@@ -8,6 +9,7 @@ import 'package:token_manage_apk/shared/ui/text/app_text.dart';
 
 import '../../../core/constants/app_icons.dart';
 import '../../../core/data/dummy_data.dart';
+import '../../../core/router/app_routes.dart';
 import '../../../core/utils/logger.dart';
 import '../../../core/utils/responsive/responsive_utils.dart';
 import '../../../shared/ui/header/profile_header.dart';
@@ -39,6 +41,9 @@ class HomeMainScreen extends ConsumerWidget {
                   icon: AppIcons.notification,
                   notificationCount: 5,
                 ),
+                onEndIconTap: () {
+                  context.pushNamed(AppRoutes.login);
+                },
               ),
               const SizedBox(height: 16),
 

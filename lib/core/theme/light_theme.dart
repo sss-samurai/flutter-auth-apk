@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-final Color lightBg = Color(0xFFF5EBE0); // f5ebe0 - scaffold background
-final Color lightCard = Color(0xFFEDEDE9); // edede9 - cards, text fields
-final Color lightPrimary = Color(0xFFD5BDAF); // d5bdaf - buttons, focus, appBar
-final Color lightAccent = Color(
-  0xFFD6CCC2,
-); // d6ccc2 - secondary buttons, icons
-final Color lightText = Color(0xFF415A77); // 415a77 - text
+// Universal appealing light theme palette
+final Color lightBg = Color(0xFFF5F7FA); // scaffold background
+final Color lightCard = Color(0xFFFFFFFF); // cards, text fields
+final Color lightPrimary = Color(0xFF0D6EFD); // buttons, AppBar
+final Color lightAccent = Color(0xFF5BC0EB); // secondary buttons/icons
+final Color lightText = Color(0xFF1A1A1A); // primary text
+final Color lightTextSecondary = Color(0xFF555555); // secondary text
 
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
@@ -24,10 +24,13 @@ final ThemeData lightTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: lightPrimary,
     foregroundColor: Colors.white,
+    elevation: 2,
   ),
   textTheme: TextTheme(
     bodyLarge: TextStyle(color: lightText),
-    bodyMedium: TextStyle(color: lightText.withOpacity(0.7)),
+    bodyMedium: TextStyle(color: lightTextSecondary),
+    titleLarge: TextStyle(color: lightText, fontWeight: FontWeight.bold),
+    titleMedium: TextStyle(color: lightTextSecondary),
   ),
   cardColor: lightCard,
   elevatedButtonTheme: ElevatedButtonThemeData(
@@ -35,6 +38,7 @@ final ThemeData lightTheme = ThemeData(
       backgroundColor: lightPrimary,
       foregroundColor: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
     ),
   ),
   inputDecorationTheme: InputDecorationTheme(

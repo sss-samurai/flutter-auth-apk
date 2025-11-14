@@ -99,6 +99,24 @@ abstract class AppLocalizations {
     Locale('ta')
   ];
 
+  /// No description provided for @homeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeTitle;
+
+  /// No description provided for @profileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profileTitle;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
   /// No description provided for @loginTitle.
   ///
   /// In en, this message translates to:
@@ -117,29 +135,17 @@ abstract class AppLocalizations {
   /// **'Later'**
   String get laterTitle;
 
-  /// No description provided for @homeTitle.
+  /// No description provided for @skipTitle.
   ///
   /// In en, this message translates to:
-  /// **'Home'**
-  String get homeTitle;
+  /// **'Skip'**
+  String get skipTitle;
 
-  /// No description provided for @profileTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Profile'**
-  String get profileTitle;
-
-  /// No description provided for @welcomeUser.
+  /// Welcome message displayed with the user's name
   ///
   /// In en, this message translates to:
   /// **'Welcome {userName}'**
-  String welcomeUser(Object userName);
-
-  /// No description provided for @welcomeUserDescription.
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome message with user name'**
-  String get welcomeUserDescription;
+  String welcomeUser(String userName);
 
   /// No description provided for @emailLabel.
   ///
@@ -165,23 +171,89 @@ abstract class AppLocalizations {
   /// **'Enter your password'**
   String get passwordHint;
 
-  /// No description provided for @settingsTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Settings'**
-  String get settingsTitle;
-
-  /// No description provided for @skipTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Skip'**
-  String get skipTitle;
-
   /// No description provided for @searchLabel.
   ///
   /// In en, this message translates to:
   /// **'Search'**
   String get searchLabel;
+
+  /// No description provided for @loginHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get loginHeader;
+
+  /// No description provided for @loginSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your credentials to continue'**
+  String get loginSubtitle;
+
+  /// No description provided for @signupHeading.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signupHeading;
+
+  /// No description provided for @signupSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a new account'**
+  String get signupSubtitle;
+
+  /// No description provided for @signupButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signupButton;
+
+  /// No description provided for @createAccountTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a New Account'**
+  String get createAccountTitle;
+
+  /// No description provided for @createAccountButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createAccountButton;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @loginButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get loginButton;
+
+  /// No description provided for @otpHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP'**
+  String get otpHeader;
+
+  /// No description provided for @otpSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your OTP'**
+  String get otpSubtitle;
+
+  /// No description provided for @verify.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verify;
+
+  /// No description provided for @otpFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'OTP'**
+  String get otpFieldLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

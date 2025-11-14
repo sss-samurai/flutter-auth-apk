@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-final Color darkBg = Color(0xFF0D1B2A); // 0d1b2a - scaffold background
-final Color darkCard = Color(0xFF1B263B); // 1b263b - cards, text fields
-final Color darkPrimary = Color(0xFF778DA9); // 778da9 - buttons, focus, appBar
-final Color darkAccent = Color(0xFF415A77); // 415a77 - secondary buttons, icons
-final Color darkText = Color(0xFFE0E1DD); // e0e1dd - text
+// Universal appealing dark theme palette
+final Color darkBg = Color(0xFF121212); // background
+final Color darkCard = Color(0xFF1E1E1E); // cards, text fields
+final Color darkPrimary = Color(0xFF0D6EFD); // buttons, AppBar
+final Color darkAccent = Color(0xFF5BC0EB); // icons, highlights
+final Color darkText = Color(0xFFE0E0E0); // primary text
+final Color darkTextSecondary = Color(0xFFB0B0B0); // secondary text
 
 final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
@@ -25,7 +27,8 @@ final ThemeData darkTheme = ThemeData(
   ),
   textTheme: TextTheme(
     bodyLarge: TextStyle(color: darkText),
-    bodyMedium: TextStyle(color: darkText.withOpacity(0.7)),
+    bodyMedium: TextStyle(color: darkTextSecondary),
+    titleLarge: TextStyle(color: darkText, fontWeight: FontWeight.bold),
   ),
   cardColor: darkCard,
   elevatedButtonTheme: ElevatedButtonThemeData(

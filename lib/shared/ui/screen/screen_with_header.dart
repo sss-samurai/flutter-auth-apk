@@ -12,7 +12,8 @@ class ScreenWithHeader extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          AppHeader(title: title),
+          // Prevents overlap with status bar
+          SafeArea(child: AppHeader(title: title)),
           Expanded(child: child),
         ],
       ),

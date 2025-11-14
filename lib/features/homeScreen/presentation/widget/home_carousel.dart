@@ -44,11 +44,8 @@ class _HomeCarouselState extends State<HomeCarousel> {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenType = getScreenType(screenWidth);
-
     final carouselHeight = ResponsiveUtils.getCarouselHeight(context);
-    final maxWidth = ResponsiveUtils.getMaxWidth(screenType, screenWidth);
+    final maxWidth = ResponsiveUtils.getMaxWidth(context);
 
     return Center(
       child: ConstrainedBox(

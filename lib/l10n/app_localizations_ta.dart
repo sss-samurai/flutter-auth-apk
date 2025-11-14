@@ -9,6 +9,15 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
+  String get homeTitle => 'முகப்பு';
+
+  @override
+  String get profileTitle => 'சுயவிவரம்';
+
+  @override
+  String get settingsTitle => 'அமைப்புகள்';
+
+  @override
   String get loginTitle => 'உள்நுழை';
 
   @override
@@ -18,18 +27,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get laterTitle => 'பிறகு';
 
   @override
-  String get homeTitle => 'முகப்பு';
+  String get skipTitle => 'தவிர்க்கவும்';
 
   @override
-  String get profileTitle => 'சுயவிவரம்';
-
-  @override
-  String welcomeUser(Object userName) {
+  String welcomeUser(String userName) {
     return 'வரவேற்கிறோம் $userName';
   }
-
-  @override
-  String get welcomeUserDescription => 'பயனர் பெயருடன் வரவேற்பு செய்தி';
 
   @override
   String get emailLabel => 'மின்னஞ்சல்';
@@ -44,11 +47,44 @@ class AppLocalizationsTa extends AppLocalizations {
   String get passwordHint => 'உங்கள் கடவுச்சொல்லை உள்ளிடவும்';
 
   @override
-  String get settingsTitle => 'அமைப்புகள்';
-
-  @override
-  String get skipTitle => 'தவிர்க்கவும்';
-
-  @override
   String get searchLabel => 'Search';
+
+  @override
+  String get loginHeader => 'Login';
+
+  @override
+  String get loginSubtitle => 'Enter your credentials to continue';
+
+  @override
+  String get signupHeading => 'Sign Up';
+
+  @override
+  String get signupSubtitle => 'Create a new account';
+
+  @override
+  String get signupButton => 'Sign Up';
+
+  @override
+  String get createAccountTitle => 'Create a New Account';
+
+  @override
+  String get createAccountButton => 'Create Account';
+
+  @override
+  String get alreadyHaveAccount => 'Already have an account?';
+
+  @override
+  String get loginButton => 'Login';
+
+  @override
+  String get otpHeader => 'OTP';
+
+  @override
+  String get otpSubtitle => 'Enter your OTP';
+
+  @override
+  String get verify => 'Verify';
+
+  @override
+  String get otpFieldLabel => 'OTP';
 }
