@@ -7,6 +7,7 @@ class SearchAppTextField extends StatelessWidget {
   final bool obscureText;
   final TextInputType keyboardType;
   final VoidCallback? onSuffixTap;
+  final VoidCallback? onTap;
 
   const SearchAppTextField({
     super.key,
@@ -16,6 +17,7 @@ class SearchAppTextField extends StatelessWidget {
     this.obscureText = false,
     this.keyboardType = TextInputType.text,
     this.onSuffixTap,
+    this.onTap,
   });
 
   @override
@@ -24,6 +26,7 @@ class SearchAppTextField extends StatelessWidget {
       controller: controller,
       obscureText: obscureText,
       keyboardType: keyboardType,
+      onTap: onTap,
       decoration: InputDecoration(
         hintText: label,
         suffixIcon: suffixIcon != null

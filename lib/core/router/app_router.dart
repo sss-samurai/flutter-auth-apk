@@ -6,6 +6,7 @@ import 'package:token_manage_apk/features/mainBottomNave/presentation/main_botto
 import '../../features/login/presentation/login.dart';
 import '../../features/otp/presentation/otp.dart';
 import '../../features/productDetail/presentation/product_detail.dart';
+import '../../features/searchAndFilter/presentation/search_and_filter.dart';
 import '../../features/signup/presentation/sighnup.dart';
 import '../../shared/ui/screen/screen_with_header.dart';
 
@@ -48,6 +49,14 @@ GoRouter setupRouter(Environment environment) {
         path: AppRoutes.otpPath,
         builder: (context, state) =>
             ScreenWithHeader(title: AppRoutes.otpName, child: Otp()),
+      ),
+      GoRoute(
+        name: AppRoutes.searchAndFilter,
+        path: AppRoutes.searchAndFilterPath,
+        builder: (context, state) => ScreenWithHeader(
+          title: AppRoutes.searchAndFilterName,
+          child: SearchAndFilter(),
+        ),
       ),
     ],
   );
